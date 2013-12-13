@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FontCool</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="agree">同意</string>
+    <string name="ok">确定</string>
+    <string name="exit">退出</string>
+    <string name="back">返回</string>
+    <string name="system">系统</string>
+    <string name="system_font">默认字体</string>
+    <string name="system_def_font">系统默认字体</string>
+    <string name="more">更多</string>
+    <!-- MainActivity -->
+    <string name="dialog_ula_title">方正字酷用户许可协议</string>
+    <string name="dialog_newversion_title">更新提示</string>
+    <string name="dialog_newversion_content">方正字酷有新版本了！是否马上更新升级到最新版？</string>
+    <string name="dialog_newversion_btn_n">稍后再说</string>
+    <string name="dialog_newversion_btn_p">立即更新</string>
+				
+    
+
+</resources>

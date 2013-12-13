@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <!-- （一）顶部标题栏部分 -->
+
+    <RelativeLayout
+        android:id="@+id/main_title_bar_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/main_background_up"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/main_founder_name_title"
+                    style="@style/main_titleBar_founder_style"
+                    android:text="@string/system" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_font_info_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/main_HQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/main_hq"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/main_font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="2.00MB"
+                    android:textColor="#ff909090"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/main_font_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="111111人下载"
+                    android:textColor="#ff909090"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/main_picker_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/main_imagebut_selector" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <!-- （二）标题栏下进度条部分 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_bg_up2"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/main_progress_bar"
+            style="@style/ProgressBar_Main"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp" />
+    </LinearLayout>
+
+    <!-- （三）中间展示文本部分 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/main_bg_middle" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp" >
+
+            <ScrollView
+                android:id="@+id/main_font_show_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none" >
+
+                <TextView
+                    android:id="@+id/text_mainfont_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="16sp" />
+                <!--
+                <LinearLayout
+                    android:id="@+id/main_show_text_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp" >
+                    </LinearLayout>                -->
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- （四）底部字模部分 -->
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/main_bg_bottom_normal" >
+
+        <com.founder.font.view.StyleGallery
+            android:id="@+id/main_style_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:spacing="3dp"
+            android:unselectedAlpha="1.0" />
+
+        <View
+            android:id="@+id/style_gallery_item_line_selected"
+            android:layout_width="1.5dip"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dip"
+            android:visibility="gone"
+            android:background="@color/main_text" />
+    </RelativeLayout>
+
+    <!-- （五）底部设置部分 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_bg_bottom2"
+        android:gravity="right" >
+
+        <ImageButton
+            android:id="@+id/main_setting_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_setting_selector" />
+    </LinearLayout>
+
+</LinearLayout>
