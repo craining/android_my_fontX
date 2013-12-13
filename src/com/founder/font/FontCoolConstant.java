@@ -26,7 +26,10 @@ public class FontCoolConstant {
 	public static int FREE_FONT_DEF_COUNT = 5;// 39
 
 	// 系统默认字体文件
-	public static final String FILE_NAME_SYSTEM_FONT = "/system/fonts/DroidSansFallback.ttf";
+	public static final String FILE_NAME_SYSTEM_FONT_ZH = "/system/fonts/DroidSansFallback.ttf";//中文
+	public static final String FILE_NAME_SYSTEM_FONT_EN = "/system/fonts/DroidSans.ttf";//英文
+	public static final String FILE_NAME_SYSTEM_FONT_ = "/system/fonts/Roboto-Regular.ttf";
+	
 
 	// sd卡下ttf等文件路径
 	public static String FONT_FILE_PATH_INSDACRD = FILE_PATH_IN_SDCARD + "/Fstore";

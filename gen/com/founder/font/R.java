@@ -52,7 +52,9 @@ public final class R {
         public static final int more_progressbar_horizontal=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0010;
+        public static final int action_settings=0x7f0a0012;
+        public static final int drawer_layout=0x7f0a000f;
+        public static final int layout_content=0x7f0a0010;
         public static final int ll=0x7f0a000b;
         public static final int main_HQ=0x7f0a0004;
         public static final int main_font_info_layout=0x7f0a0003;
@@ -65,7 +67,7 @@ public final class R {
         public static final int main_setting_but=0x7f0a000e;
         public static final int main_style_gallery=0x7f0a000c;
         public static final int main_title_bar_info=0x7f0a0001;
-        public static final int style_gallery_item_image=0x7f0a000f;
+        public static final int style_gallery_item_image=0x7f0a0011;
         public static final int style_gallery_item_line_selected=0x7f0a000d;
         public static final int text_mainfont_content=0x7f0a000a;
         public static final int text_tip=0x7f0a0000;
@@ -73,7 +75,8 @@ public final class R {
     public static final class layout {
         public static final int activity_loading=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int mainview_style_gallery_item=0x7f030002;
+        public static final int activity_main2=0x7f030002;
+        public static final int mainview_style_gallery_item=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -212,17 +215,6 @@ public final class R {
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 

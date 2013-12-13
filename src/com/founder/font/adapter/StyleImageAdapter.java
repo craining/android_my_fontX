@@ -47,9 +47,6 @@ public class StyleImageAdapter extends BaseAdapter {
 	public int mSelectPosition = 0; // 当前被选中项的位置
 	// private int mMainShowFontCount;// main里展示的数量
 
-	// 字样
-	private Typeface mCustomTypeface = null;
-
 	/**
 	 ******************************************************** 
 	 * @brief: StyleImageAdapter的构造函数
@@ -58,12 +55,10 @@ public class StyleImageAdapter extends BaseAdapter {
 	 * @version: 1.0.0.0
 	 ********************************************************* 
 	 */
-	public StyleImageAdapter(Context context, ArrayList<Font> list,
-			Typeface customTypeface, int selectedPosition) {
+	public StyleImageAdapter(Context context, ArrayList<Font> list, int selectedPosition) {
 		mContext = context;
 		this.arrFontList = list;
 		mInflater = LayoutInflater.from(mContext);
-		mCustomTypeface = customTypeface;
 		// this.mMainShowFontCount = mainShowCount;
 		this.mSelectPosition = selectedPosition;
 	}
@@ -119,7 +114,7 @@ public class StyleImageAdapter extends BaseAdapter {
 			// 更多
 			textView.setBackgroundResource(R.drawable.main_scale_normal);
 		} else {
-			textView.setTypeface(mCustomTypeface);
+			textView.setTypeface( );
 			textView.setBackgroundResource(R.drawable.main_scale_normal);
 		}
 

@@ -24,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.founder.font.Debug;
+import com.founder.font.FontCoolApplication;
 import com.founder.font.FontCoolConstant;
 import com.founder.font.R;
 import com.founder.font.adapter.StyleImageAdapter;
@@ -47,10 +48,6 @@ public class MainActivity extends Activity implements OnClickListener,
 	private FontCoolController mController;
 	private FontDownloadManager mFontDownloadManager;
 	private SoundManager mSoundManager;
-
-	// 字体样式对象
-	private Typeface mCustomTypeface;
-	private Typeface mSystemTypeface;
 
 	private int mMainFontCount;// 主界面展示数
 
@@ -121,16 +118,7 @@ public class MainActivity extends Activity implements OnClickListener,
 
 		// 获取要展示的数目
 		mMainFontCount = FontCoolConfig.getInstance().getMainFontShowCount();
-		// 初始化字体
-		mSystemTypeface = Typeface
-				.createFromFile(FontCoolConstant.FILE_NAME_SYSTEM_FONT);
-		if (new File(FontCoolConstant.DEF_FONT_FILE_PATH_INSDACRD).exists()) {
-			mCustomTypeface = Typeface
-					.createFromFile(FontCoolConstant.DEF_FONT_FILE_PATH_INSDACRD);
-		} else {
-			mCustomTypeface = Typeface.createFromAsset(this.getAssets(),
-					FontCoolConstant.FILE_NAME_FONT_DEF);
-		}
+		
 		// 加载声音文件
 		soundLoad();
 	}
@@ -158,7 +146,7 @@ public class MainActivity extends Activity implements OnClickListener,
 	private void refreshFontList() {
 		// 初始化主界面字体列表
 		mStyleImageAdapter = new StyleImageAdapter(MainActivity.this,
-				mArrayListFonts, mCustomTypeface, mShowingPosition);
+				mArrayListFonts, mShowingPosition);
 		mStyleGallery.setAdapter(mStyleImageAdapter);
 		mStyleGallery.setOnTouchListener(this);
 
